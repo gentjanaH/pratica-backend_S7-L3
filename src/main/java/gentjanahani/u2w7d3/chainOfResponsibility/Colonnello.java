@@ -16,4 +16,11 @@ public class Colonnello extends Ufficiale {
     public String getGrado() {
         return "Colonnello";
     }
+
+    @Override
+    public void trovaStipendio(long importo) {
+        if(this.getStipendio()>= importo) System.out.println("colonello");
+        if(this.getSuperiore() != null) getSuperiore().trovaStipendio(importo);
+        else System.out.println("fine catena");
+    }
 }

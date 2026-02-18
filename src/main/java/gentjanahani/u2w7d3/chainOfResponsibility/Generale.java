@@ -22,4 +22,13 @@ public class Generale extends Ufficiale{
     public String getGrado() {
         return "Generale";
     }
+
+
+
+    @Override
+    public void trovaStipendio(long importo) {
+        if(this.getStipendio()>= importo) System.out.println("generale");
+        if(this.getSuperiore() != null) getSuperiore().trovaStipendio(importo);
+        else System.out.println("fine catena");
+    }
 }

@@ -16,4 +16,11 @@ public class Capitano extends Ufficiale {
     public String getGrado() {
         return "Capitano";
     }
+
+    @Override
+    public void trovaStipendio(long importo) {
+        if(this.getStipendio()>= importo) System.out.println("capitano");
+        if(this.getSuperiore() != null) getSuperiore().trovaStipendio(importo);
+        else System.out.println("fine catena");
+    }
 }

@@ -31,7 +31,8 @@ public class InfoAdapter implements DataSource {
 
        LocalDate today= LocalDate.now();
 
-        return Math.toIntExact(ChronoUnit.YEARS.between(birth, today));
+        return LocalDate.now().getYear() - birth.getYear() +1900;
+//                Math.toIntExact(ChronoUnit.YEARS.between(birth, today));
 
 
     }

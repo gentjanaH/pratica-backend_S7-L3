@@ -16,4 +16,11 @@ public class Tenente extends Ufficiale {
     public String getGrado() {
         return "Tenente";
     }
+
+    @Override
+    public void trovaStipendio(long importo) {
+        if(this.getStipendio()>= importo) System.out.println("tenente");
+        if(this.getSuperiore() != null) getSuperiore().trovaStipendio(importo);
+        else System.out.println("fine catena");
+    }
 }

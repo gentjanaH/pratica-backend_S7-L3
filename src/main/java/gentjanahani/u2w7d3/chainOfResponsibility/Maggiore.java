@@ -16,4 +16,11 @@ public class Maggiore extends Ufficiale{
     public String getGrado() {
         return "Maggiore";
     }
+
+    @Override
+    public void trovaStipendio(long importo) {
+        if(this.getStipendio()>= importo) System.out.println("maggiore");
+        if(this.getSuperiore() != null) getSuperiore().trovaStipendio(importo);
+        else System.out.println("fine catena");
+    }
 }

@@ -16,15 +16,8 @@ public abstract class Ufficiale {
 
 
 
-public Ufficiale trovaStipendio (long importo){
+public abstract  void trovaStipendio (long importo);
 
 
-    if(this.getStipendio() >= importo){
-        return this;
-    } else if (superiore != null ) {
 
-        return superiore.trovaStipendio(importo);
-    }
-    return null;
-}
 }

@@ -19,7 +19,8 @@ public class Runner2 implements CommandLineRunner {
         maggiore.setSuperiore(colonnello);
         colonnello.setSuperiore(generale);
 
-        Ufficiale u=tenente.trovaStipendio(4000);
-        System.out.println(u.getGrado());
-    }
+       tenente.trovaStipendio(4000);
+          }
+
+
 }
